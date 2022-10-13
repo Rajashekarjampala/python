@@ -28,4 +28,19 @@ def check_greater(org_list):
         new_mapper=org_list
         # remove a selected element from the New list
         new_mapper.remove(i)
+        # logic for product
+        list_pro=1
+        for j in new_mapper:            
+            list_pro*=j
+        # To check the condition whether the selected element is greater than the product of other remaining elements in the list,
+        # if condition true the selected element is greatest    
+        if (i>list_pro):
+            # Finally return the greater value from list
+            return i
+# Execution
+testListA=[1,2,30,4,2]
+#function calling
+result=check_greater(org_list=testListA)
+#finally print result
+print("Final Result is :: {} ".format(result))
         
