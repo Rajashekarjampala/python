@@ -1,7 +1,9 @@
-'''1. Write a function to take a list, numX, numY as arguments.
-    Filter all the numbers from the list that are >numX and <numY and add to new list.
-    Finally return the new list.
-    Example :
+'''
+1. Write a function to take a list, numX, numY as arguments.
+Filter all the numbers from the list that are >numX and <numY and add to new list.
+Finally return the new list.
+
+    Example 1 :
         listA=[10,20,30,40,50,60,100,11,12,13]
         numX=45
         numY=55
@@ -9,7 +11,8 @@
         print(result)
         Expected Output : [50]
         Reason: 50 is >er than numX 45 and <er than numY 55
-    Example :
+
+    Example 2 :
         listA=[10,20,30,46,52,60,54,11,12,13]
         numX=45
         numY=55
@@ -19,7 +22,8 @@
         Reason: 46 is >er than numX 45 and <er than numY 55
         Reason: 52 is >er than numX 45 and <er than numY 55
         Reason: 54 is >er than numX 45 and <er than numY 55
-    Example :
+
+    Example 3 :
         listA=[10,20,30,46,52,60,54,11,12,13]
         numX=450
         numY=550
@@ -27,25 +31,46 @@
         print(result)
         Expected Output : []
         :param org_list: Original list passed by the User
-        :param numy: Number y passed by the User. Type is INT.
-        :param numy: Number y passed by the User. Type is INT.
+        :param numx: Numberx passed by the User. Type is INT.
+        :param numy: Numbery passed by the User. Type is INT.
         :return: New list with filtered values ONLY.  
 
     Solution Steps:
     **************
-    Iterate the Orginal list
-    Find the numbers greter than numberx
-    Find the numbers less than numbery
-    Pic the numbers between numberx and numbery
-    Filter numbers are add to new list and retun new list
-
+    Take a original list and iterate original list     
+    Check if number is greater than number X and number less than number Y
+        if yes:
+            add to new list
+        else:
+            continue lopp  
+    Finally return new list              
 '''
-
-def check_func(org_list,numx,numy):
+#define function
+def check_num(org_list,numX,numY):
+    #define new list
     new_list=[]
+    #iterate elements from original list one by one
     for i in org_list:
-        if (i>numx and i<numy):
+        #checking for element is greater than x and less than y
+        if(i>numX and i<numY):
+            #adding element to new list
             new_list.append(i)
+    #finally return new list
     return new_list
 
-print(check_func([10,20,30,40,50,60,100,11,12,13],45,55))            
+#calling function
+#example1
+x=check_num([10,20,30,40,50,60,100,11,12,13],45,55)
+print('final output : {}'.format(x))        
+
+#example2
+y=check_num([10,20,30,46,52,60,54,11,12,13],45,55)
+print('final output : {}'.format(y))  
+
+#example3
+z=check_num([10,20,30,46,52,60,54,11,12,13],450,550)
+print('final output : {}'.format(z))  
+
+#example4
+s=check_num([10,20,30,46,52,60,54,11,12,13],20,30)
+print('final output : {}'.format(s))

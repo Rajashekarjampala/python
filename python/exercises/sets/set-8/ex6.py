@@ -1,8 +1,9 @@
-'''6. Write a function to take 3 lists, numX, numY as arguments.
-      If the sum of elements in the indexes is > er sum of numX + numY, then add to new list.
+'''
+6. Write a function to take 3 lists, numX, numY as arguments.
+    If the sum of elements in the indexes is > er sum of numX + numY, then add to new list.
     Finally return the new list.
     Note: You must execute only if the lists are of same length.
-    Example :
+    Example 1  :
         listA=[10,20,30,40,50]
         listB=[1,2,3,4,5]
         listC=[100,150,200,250,300]
@@ -15,7 +16,7 @@
             sum of (numX + numY) = 250
             -    sum of ([40,4,250]) is > er than sum of (numX + numY)
             -    sum of ([50,5,300]) is > er than sum of (numX + numY)
-    Example :
+    Example 2 :
         listA=[10,20,30,40,50]
         listB=[1,2,3,4,5]
         listC=[100,150,200,250,300]
@@ -30,7 +31,7 @@
             -    sum of ([30,3,200]) is > er than sum of (numX + numY)                        
             -    sum of ([40,4,250]) is > er than sum of (numX + numY)
             -    sum of ([50,5,300]) is > er than sum of (numX + numY)
-    Example :
+    Example 3  :
         listA=[10,20,30,40,50]
         listB=[1,2,3,4,5]
         listC=[100,150,200,250,300]
@@ -42,7 +43,42 @@
         Reason: 
            sum of (numX + numY) = 600
            Sum of values in the indexes are < 600
+        :param org_lists: Original lists (Org_listA,Org_listB,Org_listC)passed by the User
+        :param numx: Numberx passed by the User. Type is INT.
+        :param numy: Numbery passed by the User. Type is INT.
+        :param numz: Numberz passed by the User. Type is INT.
+        :return: New list with filtered values ONLY.    
+           
+    Solution Steps:
+    **************
+    Take three list and iterate simantanously
+        checking sum of numbers in same indexes of three list is greater sum of number X and number Y  
+        if Yes:
+            add numbers as list to new list
+        else:
+            continue loop
+    finally return new list             
 '''
-def check_list(l1,l2,l3,x,y):
-    for i,j,k in zip(l1,l2,l3):
-    
+#define function
+def common_list(Org_listA,Org_listB,Org_listC,numX,numY):
+    #define new list
+    new_list=[]
+    #iterate three lists simantanously
+    for listA,listB,listC in zip(Org_listA,Org_listB,Org_listC):
+        #checking condition for sum of same indexes numbers in three lists is greater than sum of number x and number y
+        if((listA+listB+listC)>(numX+numY)):
+            #adding numbers as list into new list
+            new_list.append([listA,listB,listC])
+    #fiinally return new list        
+    return new_list    
+
+#calling function 
+x=common_list([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],150,100)    
+print('final output : {}'.format(x))
+
+y=common_list([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],50,100)    
+print('final output : {}'.format(y))
+
+z=common_list([10,20,30,40,50],[1,2,3,4,5],[100,150,200,250,300],500,100)    
+print('final output : {}'.format(z))
+        
