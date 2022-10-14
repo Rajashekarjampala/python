@@ -2,7 +2,6 @@
     Write a function to take a list, number X, number Y as argument.
     If the element is even then multiply that element by number X, 
     if the element is odd then multiply that element by number Y. Finally return the new list.
-
 '''
 
 #define function

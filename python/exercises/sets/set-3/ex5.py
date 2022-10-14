@@ -1,4 +1,5 @@
-'''5. Write a function to take a dict, number X,Y as arguments. If the prod of (dict key * dict val) is > sum of number (X+Y), then add it to new dict. Finally iterate and return the new dict.
+'''
+5. Write a function to take a dict, number X,Y as arguments. If the prod of (dict key * dict val) is > sum of number (X+Y), then add it to new dict. Finally iterate and return the new dict.
     Example : 
             testDict={1:4,10:2,3:4,4:7,6:11,12:9}
             numX=20
@@ -9,7 +10,8 @@
               :param orgDict: Original dictionary passed by the User
               :param numX: Number X passed by the User. Type is INT.
               :param numY: Number Y passed by the User. Type is INT.
-              :return: New dictionary with filtered values ONLY'''
+              :return: New dictionary with filtered values ONLY
+'''
 
 def check_pro(org_dic,numx,numy):
   #Define an empty new dictionary

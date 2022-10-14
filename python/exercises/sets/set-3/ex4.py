@@ -1,4 +1,5 @@
-'''4. Write a function to take a list, number X,Y,Z as arguments.
+'''
+4. Write a function to take a list, number X,Y,Z as arguments.
  From the list pick the elements that are <er than (X+Y+Z). Add those elements to new list. Finally return the new list.
     Example : 
         org_list=[1,2,300,4,5,6,7,8,9,100,11,120,200,400]
@@ -12,7 +13,8 @@
         :param numX: Number X passed by the User. Type is INT.
         :param numY: Number Y passed by the User. Type is INT.
         :param numY: Number Z passed by the User. Type is INT
-        :return: New list with filtered values ONLY'''
+        :return: New list with filtered values ONLY
+'''
 
 # This function is define From the list pick the elements that are <er than (X+Y+Z)
 def pick_less(org_list,numx,numy,numz):

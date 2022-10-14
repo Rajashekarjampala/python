@@ -1,12 +1,11 @@
-'''Write a function to take a dict, number X and number Y as arguments. 
-Multiply each key by number X, each value by number Y. Finally iterate and return the new dict.'''
+'''Define a dictionary with 10 keys. If the dict key is > 10, then add it to new dict. 
+Finally iterate and print the new dict.'''
 
-def mult_num(d1,x,y):
-    d2={}
-    d1=dict(d1)
-    x=int(x)
-    y=int(y)
-    for i,j in d1.items():
-        d2.[i*x]=j*y
-    return d2
-print(mult_num({10:1,9:2,8:3,7:4,6:5,5:6,4:7,3:8,2:9,},10,20))        
+d1={45:9,89:94,60:78,70:54,54:9,89:4,96:3,73:2,45:8,87:5}
+d2={}
+for key,value in d1.items():
+  if(key>10):
+    d2[key]=value
+for keys in d2.keys():
+  print(key)
+print(d2)

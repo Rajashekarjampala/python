@@ -1,6 +1,8 @@
-'''Write a function to take a dict as an argument.
- Multiply each key by 10, each value by 5. 
-Finally iterate and return the new dict.'''
+'''
+Write a function to take a dict as an argument.
+Multiply each key by 10, each value by 5. 
+Finally iterate and return the new dict.
+'''
 #dfine function
 def mult_num(org_dict,x,y):
     

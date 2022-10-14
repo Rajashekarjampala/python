@@ -26,6 +26,19 @@
         result=func_exec(listA)
         print(result)
         Expected Output : []
+        :param org_list: Original list passed by the User
+        :param numy: Number y passed by the User. Type is INT.
+        :param numy: Number y passed by the User. Type is INT.
+        :return: New list with filtered values ONLY.  
+
+    Solution Steps:
+    **************
+    Iterate the Orginal list
+    Find the numbers greter than numberx
+    Find the numbers less than numbery
+    Pic the numbers between numberx and numbery
+    Filter numbers are add to new list and retun new list
+
 '''
 
 def check_func(org_list,numx,numy):

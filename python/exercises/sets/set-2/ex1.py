@@ -1,6 +1,8 @@
-'''Write a function to take a list and a number X as arguments.
- From the list pick all numbers that are > er number X. 
-Add those numbers to new list. Finally return the new list.'''
+'''
+Write a function to take a list and a number X as arguments.
+From the list pick all numbers that are > er number X. 
+Add those numbers to new list. Finally return the new list.
+'''
 
 #define function 
 def fun_list(org_list,numx): 

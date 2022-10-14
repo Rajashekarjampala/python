@@ -1,4 +1,5 @@
-'''2. Write a function to take a list, number Y as arguments.
+'''
+2. Write a function to take a list, number Y as arguments.
     Filter all the numbers from the EVEN indexes, divisible by number Y. Remove duplicates.
     Example :
         listA=[10,20,30,40,50,60,100,11,12,13]
@@ -21,14 +22,18 @@
         :param org_list: Original list passed by the User
         :param numy: Number y passed by the User. Type is INT.
         :return: New list with filtered values ONLY.  
-Solustion steps:
-1. itarate the list and pick the Even index
-2. From the Even index elements divisible by a number
-3. Remove the duplicates
-4. Add new list and retun the new list           
+Solution Steps:
+***************
+  Iterate the original list
+    From the list pic the EVEN indexes
+    From the EVEN indexes checking number is divisible by numberY:
+    Checking if number divisible by numberY, and number not present in new list      
+        if yes:
+          number add to new list
+        else:
+          continue loop    
+  finally return new list      
 '''
-
-
 # Function define filter the all the even numbers from the ODD indexes
 def check_eve_ind(org_list,numy):
 

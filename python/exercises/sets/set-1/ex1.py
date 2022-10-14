@@ -1,14 +1,17 @@
-'''Write a function to take a list and a number X as arguments. 
-From the list pick all numbers that are > er number X. 
-Add those numbers to new list. Finally return the new list.'''
+'''
+1. Define a list of 10 elements.From the list pick all numbers that are > er 100. Add those numbers to new list.
+Finally print the new list.
+'''
 
-def fun_list(l1,x):
-    l1=list(l1)
-    l2=[]
-    x=int(x)
-
-    for i in l1:
-        if(i>x):
-            l2.append(i)
-    return l2 
-print(fun_list([12,100,122,98,128,300,990,24,68,10],100))   
+# Define original list
+org_list=[15,20,30,115,120,80,580,310,40,50]
+# Define new list
+new_list=[]
+# Iterate the list
+for i in org_list:
+  # Check condition, If number greater than 100  
+  if(i>100):
+    # Add to new list
+    new_list.append(i)
+# Finally print the new list    
+print(new_list)    

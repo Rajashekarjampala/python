@@ -17,7 +17,7 @@
 def check_dic(org_dic):
     new_dic={}
     for i,j in org_dic.items():
-        if max(j):
+        if max(org_dic.values):
             new_dic[i]=j
-    return i
+    return new_dic
 print(check_dic({10:20, 3:30, 4:16,90:100,20:30,11:23,17:44,20:400}))        

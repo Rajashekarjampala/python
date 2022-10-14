@@ -1,10 +1,7 @@
 '''
     Write a function to take a list as an argument. 
     If the element is even then multiply that element by 100, 
-    if the element is odd then multiply that element by 200. Finally return 
-    the new list.
-
-   
+    if the element is odd then multiply that element by 200. Finally return the new list.
 '''
 #define function
 def mult_(org_list,x,y):

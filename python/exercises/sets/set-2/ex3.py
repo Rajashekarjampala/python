@@ -1,6 +1,8 @@
-'''Write a function to take a dict, number numx and number Y as arguments. 
+'''
+Write a function to take a dict, number numx and number Y as arguments. 
 Multiply each key by number numx, each value by number Y. 
-Finally iterate and return the new dict.'''
+Finally iterate and return the new dict.
+'''
 #define function 
 def mult_num(org_dict,numx,numy):
 

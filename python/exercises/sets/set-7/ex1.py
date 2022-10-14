@@ -1,4 +1,5 @@
-'''1. Write a function to take a list. Filter all the even numbers from the ODD indexes. Remove duplicates.
+'''
+1.  Write a function to take a list. Filter all the even numbers from the ODD indexes. Remove duplicates.
     Example :
         listA=[10,20,30,40,50,60,100,11,12,13]
         result=func_exec(listA)
@@ -10,13 +11,20 @@
         print(result)
         Expected Output : [50]
         :param org_list: Original list passed by the User
-        :return: New list with filtered values ONLY.   
+        :return: New list with filtered values ONLY. 
+
 Solution Steps:
-1. itarate the list and pick the Odd index
-2. From the Odd index pick the evevn numbers
-3. Remove the duplicates
-4. Add new list and retun the new list         
-        '''
+***************
+  Iterate the original list
+    From the list pic the ODD indexes
+    From the ODD indexes checking number is even numbers 
+    checking for number already not present in new list
+      if number even:       
+          number add to new list
+      else:
+        continue loop        
+  Finally return new list
+  '''
 
 # Function define filter the all the even numbers from the ODD indexes
 def check_eve_ind(org_list):

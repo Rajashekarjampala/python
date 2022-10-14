@@ -1,4 +1,5 @@
-'''3. Write a function to take 2 lists. Use zip function to iterate the list and pick values that
+'''
+3. Write a function to take 2 lists. Use zip function to iterate the list and pick values that
    are common at both indexes.
     Example :
         listA=[100,20,300,40,50,60,100]
@@ -10,7 +11,13 @@
         # 50 -> listA[4] == listB[4]
         Expected Output : [20,40,50]
         :param org_list: Original list(org_listA, org_listB) passed by the User
-        :return: New list with filtered values ONLY'''   
+        :return: New list with filtered values ONLY
+Solution Steps:
+**************
+Iterate the original two lists using zip
+  Write condition for comman values in list
+  Add to new list and return              
+'''   
         
 # function gives comman elements in listA and listB
 def check_list(org_listA, org_listB):  

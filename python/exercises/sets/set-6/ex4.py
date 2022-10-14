@@ -1,4 +1,5 @@
-'''4. Write a function to take 2 lists and an integer X. Use zip function to iterate the list and pick values that
+'''
+4. Write a function to take 2 lists and an integer X. Use zip function to iterate the list and pick values that
    are common at both indexes, they must be divisible by X. 
    *** Note: You must iterate the lists only if the lengths of the lists are equal. *** 
    -------------------------------------------------------------------------------------
@@ -28,12 +29,17 @@
         :return: New list with filtered values ONLY
         
 Solution Steps:
-1. Take two lists and iterate both list using zip
-2. From the list pick the comman elelments in both lists
-3. To check the condition filter values are divisilble 
-4. Return the list     
-        
-                '''
+**************
+Iterate the two original lists using zip 
+    Check the comman numbers in both lists
+        If yes:
+            check condition comman number divisible by numberX
+            if yes:
+                divisible number 
+            else:
+                loop is continue     
+Finally Return the new list 
+'''
 #This function define comman values and divisible numbers                
 def check_comman(org_list1,org_list2,numx):
     # define empty list

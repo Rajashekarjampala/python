@@ -1,4 +1,5 @@
-'''6. Write a function to take 2 lists. Iterate both the lists, 
+'''
+6. Write a function to take 2 lists. Iterate both the lists, 
    if the elements in both the lists match then add it to new list.
    From that list select all elements in ODD indexes.
    Finally return the new list. The new list must not contain duplicates.
@@ -15,7 +16,8 @@
         print(result)
         Expected Output : []
         :param org_list: Original list(org_listA,org_listB) passed by the User
-        :return: New list with filtered values ONLY'''
+        :return: New list with filtered values ONLY
+'''
 
 def check_mat(org_listA,org_listB):
     #define an empty list

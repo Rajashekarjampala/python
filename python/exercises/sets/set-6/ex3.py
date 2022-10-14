@@ -1,4 +1,5 @@
-'''3. Write a function to take a list. Select the number that is greater than product of all other numbers.
+'''
+3. Write a function to take a list. Select the number that is greater than product of all other numbers.
     Example :
         listA=[1,2,30,4,2]
         result=func_exec(listA)
@@ -13,12 +14,17 @@
         :param org_list: Original list passed by the User        
         :return: New list with filtered values ONLY
 Solution Steps:
-1. First iterate the list
-2. Cheking for removed element is great than product of remaing elements in the list   
-3. checking for number is greater than of product of remaining numbers in the list
-3. Return greatest number in the list              
-                
-        '''
+**************
+Iiterate the original list
+    Find the current number, store in a variable currNumber
+        Find the product of remaining numbers and store in a variable sumList
+        Check if currNumber is >er productList:
+            If yes:
+                return currNumber
+            else:
+                continue the LOOP  
+Finally return the new list             
+'''
 # This function is define pick greater number sum of all the list       
 def check_greater(org_list):
 

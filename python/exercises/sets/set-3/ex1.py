@@ -1,4 +1,5 @@
-'''1. Write a function to take a list as an argument. Remove all duplicates from the list. 
+'''
+1. Write a function to take a list as an argument. Remove all duplicates from the list. 
 Don't use any built-in. Check using if conditions.
     Example : 
         org_list=[1,2,3,4,5,6,7,8,9,10,11,12,1,1,2,4,4,5,6,7]
@@ -6,7 +7,8 @@ Don't use any built-in. Check using if conditions.
         print(result)
         Expected Output : [1,2,3,4,5,6,7,8,9,10,11,12]
         :param org_list: Original list passed by the User
-        :return: New list with filtered values ONLY.'''
+        :return: New list with filtered values ONLY.
+'''
 
 #This function removes duplicates elements from list
 def check_dup(org_list):

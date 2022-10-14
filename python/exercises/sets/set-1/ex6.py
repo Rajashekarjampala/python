@@ -1,15 +1,9 @@
-'''Write a function to take a list, number X, number Y as arguments. If the element is even then multiply that element by number X, 
-if the element is odd then multiply that element by number Y. Finally return the new list.'''
+'''Define a list of 10 elements. From the list pick the elements that are not divisible by 5 and 3. 
+Add those elements to new list. Finally print the new list.'''
 
-def mult_num(l1,x,y):
-    l1=list(l1)
-    l2=[]
-    x=int(x)
-    y=int(y)
-    for i in l1:
-        if (i%2==0):
-            l2.append(i*x)
-        else:
-            l2.append(i*y)
-    return l2
-print(mult_num([2,5,8,9,3,4],2,3))              
+l1=[8,9,5,7,3,2,1,6,4,10]
+l2=[]
+for i in l1:
+  if(i % 3 !=0) and (i % 5!=0):
+    l2.append(i)
+print(l2)    

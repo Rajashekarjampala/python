@@ -1,4 +1,5 @@
-'''5. Write a function to take a dict and number X as argument. 
+'''
+5. Write a function to take a dict and number X as argument. 
 Find the key,value pairs that are both divisible by number X
     Example : 
             testDict={10:20, 3:30, 4:40,90:100,20:30}
@@ -11,9 +12,15 @@ Find the key,value pairs that are both divisible by number X
             :return: New dic with filtered values ONLY
             
 Solution Steps:
-1. From the dictionary to Iterate the keys and values
-2. To check the condition for items divisible by numberX
-3. Return the new dictionary.'''  
+**************
+Iterate new dictionary of keys and values
+Check if condition is  key and value both divisible by numberX 
+  If Yes:
+    add to new dictionary
+  else:
+    continue loop
+Finally return the new dictionary      
+'''  
 
 # This function is defines the key and value (item) divisible by a num            
 def check_div(org_dic,numx):

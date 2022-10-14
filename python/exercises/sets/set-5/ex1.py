@@ -1,4 +1,5 @@
-'''1. Write a function to take a list. Reverse and return the new list.
+'''
+1. Write a function to take a list. Reverse and return the new list.
     Example :
         listA=[10,20,30,40,50,60,100]
         result=func_exec(listA)
@@ -6,6 +7,12 @@
         Expected Output : [100,60,50,40,30,20,10]
         :param org_list: Original list passed by the User
         :return: return new list with org_list arg
+
+Solution Steps:
+**************
+Iterate the original list
+  Write condition for reverse list
+  Add to new list and return         
 '''
 # function define the reverse the list
 def reverse_list(org_list):

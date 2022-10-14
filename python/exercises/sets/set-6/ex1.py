@@ -1,4 +1,5 @@
-'''1. Write a function to take a list. Filter all the prime numbers, add to new list and return the new list.
+'''
+1. Write a function to take a list. Filter all the prime numbers, add to new list and return the new list.
     Example :
         org_list=[10,20,30,40,50,60,100,11]
         result=func_exec(org_list)
@@ -12,10 +13,18 @@
         :param org_list: Original list passed by the User
         :return: New list with filtered values ONLY.        
 Solution Steps:
-1. From the list, checking for number is greater than Or equals to 2
-2. checking prime numbers from the list
-2. Iterate the list and add to the new list
-3. Return the prime list.'''
+**************
+Iterate the the original list
+From the list Checking for number is greater than Or equals to 2 
+    Checking the co-factors of list (range 2 to original list)
+        If number has co_factors :
+            loop will break
+        else:
+            Add to new list    
+            loop not breakable the number is prime
+Finally return the new list        
+
+'''
 #This Function return prime number list
 def check_prime(org_list):
     #define new list

@@ -1,4 +1,5 @@
-'''5. Write a function to take a dict and number X arguments. 
+'''
+5. Write a function to take a dict and number X arguments. 
 If the dict key is NOT divisible by number X, then
    add the key to new dict and finally return the new dict.
     Example : 
@@ -21,7 +22,8 @@ If the dict key is NOT divisible by number X, then
             Expected Output : {}
             :param orgDict: Original dictionary passed by the User
             :param numX: Number X passed by the User. Type is INT.
-            :return: New dictionary with filtered values ONLY.'''
+            :return: New dictionary with filtered values ONLY.
+'''
 
 #This function gives a new dictionary with key-value pair which the keys from original dictionary is not divisible by value x entered by the user
 def check_not_div(org_dic,numx):

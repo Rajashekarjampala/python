@@ -1,4 +1,5 @@
-'''1. Write a function to take a list as an argument. Find the number that occurs the most number of times.
+'''
+1. Write a function to take a list as an argument. Find the number that occurs the most number of times.
     Example : 
         org_list=[1,2,300,4,5,6,7,2,8,9,10,100,11,2,200,10]
         result=func_exec(org_list)
@@ -16,7 +17,8 @@
         Expected Output : "NULL"
         Reason: All numbers in the list occur exactly once, so result in "NULL"
         :param org_list: Original list passed by the User
-        :return: New list with filtered values ONLY'''
+        :return: New list with filtered values ONLY
+'''
 #This Function gives the most repeated elements from the list
 def check_rep(org_list):
     

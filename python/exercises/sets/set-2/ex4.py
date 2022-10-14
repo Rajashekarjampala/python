@@ -1,5 +1,7 @@
-'''Write a function to take a dict, number X as arguments.
-If the dict key is > number X, then add it to new dict. Finally iterate and return the new dict.'''
+'''
+Write a function to take a dict, number X as arguments.
+If the dict key is > number X, then add it to new dict. Finally iterate and return the new dict.
+'''
 #define function
 def num_gre(org_dict,x):
 

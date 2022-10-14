@@ -1,4 +1,5 @@
-'''2. Write a function to take a org_dict as an argument. Find the key that has maximum value and return the key.
+'''
+2. Write a function to take a org_dict as an argument. Find the key that has maximum value and return the key.
     Example : 
         testorg_Dict={1:4,10:100,3:90,4:40,6:80,12:200}
         result=func_exec(testorg_Dict)
@@ -6,7 +7,8 @@
         Expected Output : 12
         Reason: Output is 12 since 12 has value of 200 which is greater than other values
         :param org_list: Original list passed by the User
-        :return: New list with filtered values ONLY'''
+        :return: New list with filtered values ONLY
+'''
 
 # This function is define maximum value and return the key
 def max_key(org_dic):

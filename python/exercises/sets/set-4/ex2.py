@@ -1,11 +1,13 @@
-'''2. Write a function to take a list as an argument. Find all the elements that occur in ODD indexes.
+'''
+2. Write a function to take a list as an argument. Find all the elements that occur in ODD indexes.
     Example : 
         org_list=[1,2,300,4,5,6,7,2,8,9,10,100,11,2,200,10]
         result=func_exec(org_list)
         print(result)
         Expected Output : [2,4,6,2,9,100,2,10]
         :param orgList: Original list passed by the User
-        :return: ODD indexes from list ONLY'''
+        :return: ODD indexes from list ONLY
+'''
 
 #This function gives a new list with odd index elements in the original list
 def check_odd_ind(org_list):

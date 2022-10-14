@@ -1,12 +1,13 @@
-'''Write a function to take a dict, number X as arguments.
-If the dict key is > number X, then add it to new dict. Finally iterate and return the new dict.'''
+'''Define a list of 10 elements. If the element is even then multiply that element by 100, 
+if the element is odd then multiply that element by 200. Finally print the new list.'''
 
-def num_gre(d1,x):
-    d2={}
-    d1=dict(d1)
-    x=int(x)
-    for i,j in d1.items():
-        if (i>x):
-            d2[i]=j
-    return d2
-print(num_gre({11:1,9:2,8:3,0:4,76:5,5:6,4:7,3:8,922:9,911:10},50))            
+l1=[22,67,90,190,60,89,79,50,39,51]
+l2=[]
+for i in l2:
+  if(i % 2 == 0):
+    l2.append(i*100)
+  else:
+    l2.append(i*200)
+print(l2)    
+    
+
