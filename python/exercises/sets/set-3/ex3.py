@@ -15,8 +15,7 @@ From the list pick the elements that are >er than (X+Y+Z). Add those elements to
         :param numY: Number Z passed by the User. Type is INT
         :return: New list with filtered values ONLY
 '''
-        
-#Tthis function define From the list pick the elements that are >er than (X+Y+Z)
+#This function define From the list pick the elements that are >er than (X+Y+Z)
 def pic_gre(org_list,numx,numy,numz):
 
     #define an empty new list

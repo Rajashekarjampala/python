@@ -24,7 +24,6 @@ If the dict key is NOT divisible by number X, then
             :param numX: Number X passed by the User. Type is INT.
             :return: New dictionary with filtered values ONLY.
 '''
-
 #This function gives a new dictionary with key-value pair which the keys from original dictionary is not divisible by value x entered by the user
 def check_not_div(org_dic,numx):
     
@@ -39,8 +38,7 @@ def check_not_div(org_dic,numx):
             #adding key-value pair to new dictionary
             new_mapper[_key]=_value
     #finally returns new dictionary        
-    return new_mapper 
-    
+    return new_mapper     
 
 # Execution
 testDict={1:4,10:20,3:4,4:7,60:11,12:9}

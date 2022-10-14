@@ -42,7 +42,7 @@ Finally return the new list.
         if yes:
             add to new list
         else:
-            continue lopp  
+            continue loop  
     Finally return new list              
 '''
 #define function

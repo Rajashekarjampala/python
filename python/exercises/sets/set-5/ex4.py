@@ -13,7 +13,6 @@ Iterate the original dictionary
   Write condition for sort dictionary
   Add to new dictionary and return                  
 '''
-
 #This function returns new sorted dictionary
 def check_sort(org_dic):
 
@@ -31,6 +30,6 @@ def check_sort(org_dic):
 # Execution
 testDict={1:4,10:20,3:4,4:7,60:11,12:9}
 #function calling
-result=check_sort(orgDictsort=testDict)
+result=check_sort(org_dic=testDict)
 #finally print result
 print("Final Result is :: {} ".format(result))

@@ -33,8 +33,7 @@ def check_div(org_dic,numx):#function defined
             #adding key-value pair to new dictionary
             new_mapper[_key]=_value
     #finally return new dictionary        
-    return new_mapper
-    
+    return new_mapper    
 
 # Execution
 testDict={1:4,10:20,3:4,4:7,60:11,12:9}

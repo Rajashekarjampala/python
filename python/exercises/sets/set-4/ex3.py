@@ -18,7 +18,7 @@ def check_eve_ind(org_list):
   #loop i value contains even numbers and step number is 2
   for i in range(0,len(org_list),2):
     #even index elements from original list is adds to new list
-    new_mapper.append(org_list[i]
+    new_mapper.append(org_list[i])
   #finally returns new list  
   return new_mapper 
 

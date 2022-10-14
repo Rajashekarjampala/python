@@ -22,8 +22,7 @@ From the list Checking for number is greater than Or equals to 2
         else:
             Add to new list    
             loop not breakable the number is prime
-Finally return the new list        
-
+Finally return the new list   
 '''
 #This Function return prime number list
 def check_prime(org_list):

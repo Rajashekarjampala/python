@@ -6,7 +6,7 @@
         numY=10
         result=func_exec(listA,numY)
         print(result)
-        Expected Output : [30,50,100]
+        Expected Output : [10,30,50,100]
     Example :
         listA=[10,21,301,41,501,50,1100,11,12,13]
         numY=10

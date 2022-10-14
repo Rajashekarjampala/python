@@ -24,7 +24,6 @@ def check_dup(org_list):
     #finally returns a new list without duplicates        
     return new_mapper 
     
-
 # Execution
 test_list=[1,2,3,4,5,6,7,8,9,10,11,12,1,1,2,4,4,5,6,7]
 result=check_dup(org_list=test_list)

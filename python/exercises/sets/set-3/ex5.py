@@ -12,7 +12,6 @@
               :param numY: Number Y passed by the User. Type is INT.
               :return: New dictionary with filtered values ONLY
 '''
-
 def check_pro(org_dic,numx,numy):
   #Define an empty new dictionary
   new_mapper={} 

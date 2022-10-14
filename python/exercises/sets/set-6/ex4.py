@@ -9,7 +9,7 @@
         numX=10
         result=func_exec(listA,listB)
         print(result)
-        Expected Output : []
+        Expected Output : [20,40,50]
     Example :
         listA=[100,20,300,40,50,60,100]
         listB=[100,20,300,40,50,60,100]

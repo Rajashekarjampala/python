@@ -13,7 +13,6 @@ Iterate the original dictionary
   Write condition for sort dictionary values
   Add to new dictionary and return                  
 '''
-
 #This function returns new sorted dictionary by values
 def sort_value(org_dic):
     

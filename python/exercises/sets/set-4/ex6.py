@@ -8,7 +8,7 @@
         org_listB=[10,200,30,40,500,60,100,400,90]
         result=func_exec(org_listA,org_listB)
         print(result)
-        Expected Output : [30,100]
+        Expected Output : [30,60]
     Example :
         org_listA=[10,20,30,40,50,60,100]
         org_listB=[101,2001,130,140,1500,610,1100,4001,190,901]
