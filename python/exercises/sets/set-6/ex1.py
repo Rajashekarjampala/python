@@ -46,7 +46,7 @@ def check_prime(org_list):
     return new_mapping
 
 # Execution
-testorg_list=[10,20,30,40,50,60,100,11]
+testorg_list=[10,20,23,30,40,50,60,100,11]
 #function calling
 result=check_prime(org_list=testorg_list)
 #finally print result
