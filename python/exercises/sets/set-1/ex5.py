@@ -1,14 +1,16 @@
-'''Write a function to take a list as an argument. If the element is even then multiply that element by 100, if the element is odd then 
-multiply that element by 200. Finally return the new list.'''
-
-def number_list(l1,x):
-  l1 = list(l1)
-  l2 = []
-  x = int(x)
-  for i in l1:
-    if(i%2==0):
-      l2.append(i*100)
-    else:
-      l2.append(i*200)
-  return l2
-print(number_list([1,3,5,7,9,10,12,15,20,25],3))
+'''
+5. Define a list of 10 elements. From the list pick the elements that are not divisible by 5. 
+Add those elements to new list. Finally print the new list.
+'''
+# Define original list
+org_list=[11,100,127,99,125,331,990,23,68,10]
+# Define new_list
+new_lst=[]
+# Iterate the list
+for i in org_list:
+    # Check condition for number is not divisible by 5
+    if(i%5!=0):
+        # Add to the new list
+        new_lst.append(i)
+# Print the new list        
+print(new_lst)

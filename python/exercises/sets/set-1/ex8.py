@@ -1,12 +1,16 @@
-'''Write a function to take a list, number X as arguments. From the list pick the elements that are not divisible by number X.
- Add those elements to new list. Finally return the new list.'''
-
-def number_list(l1,x):
-  l1 = list(l1)
-  l2 = []
-  x = int(x)
-  for i in l1:
-    if(i%x!=0):
-      l2.append(i)
-  return l2
-print(number_list([1,3,5,7,9,10],3))   
+'''
+8.From the list pick the elements that are not EVEN. Add those elements to new list. 
+Finally print the new list.
+'''
+# Define original list
+org_list=[11,100,127,99,125,331,990,23,68,10]
+# Define new list list
+new_lst=[]
+# Iterate the list
+for i in org_list:
+    # To check the number is odd(not even)
+    if(i%2!=0):
+        # Add to the new list
+        new_lst.append(i)
+# Finally print the new list        
+print(new_lst)
