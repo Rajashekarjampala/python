@@ -44,7 +44,7 @@
 '''
 
 #define function 
-def check_gre(org_list):
+def check_greater(org_list):
     #define new list 
     new_list=[]
     #define list to store lengths of elements in orginal list
@@ -63,12 +63,83 @@ def check_gre(org_list):
     else:
         return [] 
  #calling function  
- #exanple1 
-x=check_gre(["hello","world","science","maths","Python"])       
-print('final result : {}'.format(x))
-#example2
-y=check_gre(["hello","world","science","maths","Pythonics"])
-print('final result : {}'.format(y))
-#example3
-z=check_gre(["hello","world","today"])
-print('final result : {}'.format(z))
+#Testcase 1
+result=check_greater(["hello","world","science","maths","Python"])
+print("\n")
+print('Testcase 1 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 2
+result=check_greater(["hello","world","science","maths","Pythonics"])
+print("\n")
+print('Testcase 2 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 3
+result=check_greater(["hello","world","today"])
+print("\n")
+print('Testcase 3 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 4
+result=check_greater(["prashanth","shekar","sravan","goutham","prasad","sraavi"])
+print("\n")
+print('Testcase 4 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 5
+result=check_greater(["airtel","vodafone","idea","jio","bsnl","mahesh"])
+print("\n")
+print('Testcase 5 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#TestCase 6
+result=check_greater(["india","srilanka","america","south africa","afganisthan"])
+print("\n")
+print('Testcase 6 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 7
+result=check_greater(["cat","dog","elephant","fox","rabbit"])
+print("\n")
+print('Testcase 7 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 8
+result=check_greater(["hyderabad","miyapur","kukatpally","sangareddy","patancheru"])
+print("\n")
+print('Testcase 8 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 9
+result=check_greater(["mobile","laptop","redmi","realme","vivo"])
+print("\n")
+print('Testcase 9 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 10
+result=check_greater(["book","pen","pencile","niddle","writteing"])
+print("\n")
+print('Testcase 10 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#

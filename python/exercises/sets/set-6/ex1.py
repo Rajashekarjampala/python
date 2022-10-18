@@ -11,7 +11,8 @@
         print(result)
         Expected Output : [11,23]
         :param org_list: Original list passed by the User
-        :return: New list with filtered values ONLY.        
+        :return: New list with filtered values ONLY. 
+
 Solution Steps:
 **************
 Iterate the the original list
@@ -24,6 +25,7 @@ From the list Checking for number is greater than Or equals to 2
             loop not breakable the number is prime
 Finally return the new list   
 '''
+
 #This Function return prime number list
 def check_prime(org_list):
     #define new list
@@ -46,8 +48,84 @@ def check_prime(org_list):
     return new_mapping
 
 # Execution
-testorg_list=[10,20,23,30,40,50,60,100,11]
-#function calling
-result=check_prime(org_list=testorg_list)
-#finally print result
-print("Final Result is :: {} ".format(result))    
+#calling function
+#Testcase 1
+result=check_prime([10,20,30,40,50,60,100,11])
+print("\n")
+print('Testcase 1 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 2
+result=check_prime([10,20,23,30,40,50,60,100,11])
+print("\n")
+print('Testcase 2 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 3
+result=check_prime([77,44,72,84,98,17,13,78])
+print("\n")
+print('Testcase 3 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 4
+result=check_prime([12,6,24,42,8,26,62,76])
+print("\n")
+print('Testcase 4 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#Testcase 5
+result=check_prime([32,64,101,74,103,86,105,58])
+print("\n")
+print('Testcase 5 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+#TestCase 6
+result=check_prime([11,22,33,44,55,66,77,88])
+print("\n")
+print('Testcase 6 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 7
+result=check_prime([99,88,77,66,55,44,33,22])
+print("\n")
+print('Testcase 7 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 8
+result=check_prime([101,2,103,4,104,5,105,6])
+print("\n")
+print('Testcase 8 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 9
+result=check_prime([78,24,23,76,89,44,22,88])
+print("\n")
+print('Testcase 9 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
+# TestCase 10
+result=check_prime([24,36,48,50,62,74,86,98])
+print("\n")
+print('Testcase 10 Output : {}'.format(result))
+print("\n")
+print("-"*50)
+print("\n")
+# ------------------------------------------------------------------#
