@@ -1,4 +1,4 @@
-# If:
+# If Condition:
 # If the test expression is True, the statement(s) is executed.
 # If the test expression is False, the statement(s) is not executed.
 
