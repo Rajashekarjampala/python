@@ -1,2 +1,1 @@
-set-6 ex-2
-set-6 ex-3
+We need to know concept of list hashing and searching

@@ -1,38 +1,47 @@
 '''
-1. Write a function to take a list. Reverse and return the new list.
-    Example :
-        listA=[10,20,30,40,50,60,100]
-        result=func_exec(listA)
-        print(result)
-        Expected Output : [100,60,50,40,30,20,10]
-        :param org_list: Original list passed by the User
-        :return: return new list with org_list arg
+
+5. Write a function to take a dict as an argument. 
+	Find the key that has least value and return the key.
+
+	Example : 
+		testDict={1:4,10:100,3:90,4:40,6:80,12:200}
+		result=func_exec(testDict)
+		print(result)
+		Expected Output : 1
+		Reason: Output is 1 since 1 has value of 4 which is lesser than other values
+
+
+	Example : 
+		testDict={1:4,10:100,3:90,4:40,6:80,12:200,1000:3}
+		result=func_exec(testDict)
+		print(result)
+		Expected Output : 1000
+		Reason: Output is 1000 since 1000 has value of 3 which is lesser than other values
+
+		:param org_dic: Original dict passed by the User
+        :return: return dictionary with filtered values ONLY. 
 
 Solution Steps:
 **************
-Define the the function  
-  We can take one empty list
-  Iterate the original list 
-  Reverse the Ogiginal list 
-  Reversed list is add to the empty list 
-  Return the empty list 
-Print the empty list
+Iterate the original dictionary
+Values are store in variable
+Find the minimum value from the variable
+Finally return the key
 '''
-# function define the reverse the list
-def check_reverse(org_list):
-
-  # define empty list
-  new_mapper = [] 
-  # itearate the orginal list
-  for i in reversed(org_list): 
-    # add elements in to new list
-    new_mapper.append(i) 
-  # finally return the new list
-  return new_mapper 
+#define function
+def check_min(Org_dict):
+    #stores values from original dict
+    _values=Org_dict.values()
+    #iterate keys and values simantanously from original dict
+    for _key,_value in Org_dict.items():
+        #checking for current value is the minimum value from the original dict
+        if(_value==min(_values)):
+            #return key
+            return _key
 
 #calling function
 #Testcase 1
-result=check_reverse([10,20,30,40,50,60,70,80,90,100])
+result=check_min({1:4,10:100,3:90,4:40,6:80,12:200})
 print("\n")
 print('Testcase 1 Output : {}'.format(result))
 print("\n")
@@ -40,7 +49,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 2
-result=check_reverse([20,40,60,80,100,120,140,160,180,200])
+result=check_min({1:4,10:100,3:90,4:40,6:80,12:200,1000:3})
 print("\n")
 print('Testcase 2 Output : {}'.format(result))
 print("\n")
@@ -48,7 +57,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 3
-result=check_reverse([11,12,13,14,15,16,17,18,19,20])
+result=check_min({32:3,42:5,75:3,83:80,63:75,60:23})
 print("\n")
 print('Testcase 3 Output : {}'.format(result))
 print("\n")
@@ -56,7 +65,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 4
-result=check_reverse([1,2,3,4,5,6,7,8,9,10])
+result=check_min({5:125,410:10,45:31,72:73,520:310,53:31})
 print("\n")
 print('Testcase 4 Output : {}'.format(result))
 print("\n")
@@ -64,7 +73,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 5
-result=check_reverse([100,200,300,400,500,600,700,800,900,1000])
+result=check_min({300:50,4:3,500:80,9:5,9:2,12:17})
 print("\n")
 print('Testcase 5 Output : {}'.format(result))
 print("\n")
@@ -72,7 +81,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #TestCase 6
-result=check_reverse([21,22,23,24,25,26,27,28,29,30])
+result=check_min({42:21,517:31,750:35,73:36,830:83,9:5})
 print("\n")
 print('Testcase 6 Output : {}'.format(result))
 print("\n")
@@ -80,7 +89,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 # TestCase 7
-result=check_reverse([90,91,92,93,94,95,96,97,98,99,100])
+result=check_min({121:11,6:61,14:41,17:71,13:31,15:51})
 print("\n")
 print('Testcase 7 Output : {}'.format(result))
 print("\n")
@@ -88,7 +97,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 # TestCase 8
-result=check_reverse([11,22,33,44,55,66,77,88,99,100])
+result=check_min({2:3,6:7,4:5,7:8,5:6,3:4})
 print("\n")
 print('Testcase 8 Output : {}'.format(result))
 print("\n")
@@ -96,7 +105,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 # TestCase 9
-result=check_reverse([25,35,45,55,65,75,85,95,105,115])
+result=check_min({9:5,8:4,7:3,6:2,5:1,10:7})
 print("\n")
 print('Testcase 9 Output : {}'.format(result))
 print("\n")
@@ -104,7 +113,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 # TestCase 10
-result=check_reverse([121,221,321,421,521,621,721,821,921])
+result=check_min({18:81,17:71,19:91,27:72,22:22,32:23})
 print("\n")
 print('Testcase 10 Output : {}'.format(result))
 print("\n")

@@ -281,7 +281,7 @@ $ 9. Write a python function to print all the elements of an array passed as an 
 
 # Update the Dictonary :
   dic={'name':'raj','age':25,'des':'devops'}
-  dic.update{'address':'hyderabad'}
+  dic.update({'address':'hyderabad'})
   print(dic)
 
 --------------------------------------------------------------------------------------------------
@@ -536,7 +536,7 @@ print(list_of_num)
 sorting list
 L=[1,2,3,6,7,9,4]
 NL=[]
-for _ in range(len(L)):
+for i in range(len(L)):
      NL.append(min(L))
      L.remove(min(L))
      print(NL)
