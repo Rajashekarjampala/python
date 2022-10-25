@@ -32,7 +32,7 @@ Set	Exercise	Documentation	Code	Execution	Comments	Github
 5	4	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-5/ex4.py
 5	5	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-5/ex5.py
 6	1	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex1.py
-6	2	Done	Done	Not-Done	Pending	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex2.py
+6	2	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex2.py
 6	3	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex3.py
 6	4	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex4.py
 6	5	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-6/ex5.py
@@ -45,3 +45,12 @@ Set	Exercise	Documentation	Code	Execution	Comments	Github
 8	4	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-8/ex4.py
 8	5	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-8/ex5.py
 8	6	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-8/ex6.py
+9	1	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-9/ex1.py
+9	2	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-9/ex2.py
+10	1	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex1.py
+10	2	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex2.py
+10	3	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex3.py
+10	4	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex4.py
+10	5	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex5.py
+10	6	Done	Done	Done	NC	https://github.com/Rajashekarjampala/python/blob/main/python/exercises/sets/set-10/ex6.py
+						
