@@ -27,20 +27,21 @@ def check_prime(org_dict):
         new_dict={}        
         #itrates keys and values simantanously
         for _key,_value in org_dict.items():
-                #loop for checking key is prime
-                for i in range(2,_key):
-                        #checking for co-factors if found any co-factors between these range loop will break
-                        if(_key%i==0 or _key<2):
-                          break
-                else:
-                        #checking for value is prime
-                        for j in range(2,_value):
-                                #if found any co-factors between these range loop will break
-                                if(_value%j==0 or _value<2):
-                                         break   
+                if (_key>=2 and _value>=2):
+                        #loop for checking key is prime
+                        for i in range(2,_key):
+                                #checking for co-factors if found any co-factors between these range loop will break
+                                if(_key%i==0):
+                                        break
                         else:
-                                #both key and value prime,so add to new dictionary
-                                 new_dict[_key]=_value     
+                                #checking for value is prime
+                                for j in range(2,_value):
+                                        #if found any co-factors between these range loop will break
+                                        if(_value%j==0 ):
+                                                break   
+                                else:
+                                        #both key and value prime,so add to new dictionary
+                                        new_dict[_key]=_value     
          #finally return new dictionary               
         return new_dict      
 

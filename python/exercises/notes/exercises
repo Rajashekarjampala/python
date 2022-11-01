@@ -805,10 +805,18 @@ Conditions
 	-	If-else
 	-	If-elif-else
 
+Functions
+*********
+    -  With Args
+    -  Without Args
+    -  *args
+    -  **kwargs
+    -  Default Args	
 
-
-
-
+Objects
+********
+    - Mutables
+    - Im-Mutables	
 
 --------------------------------------------------------------------------------------------------------------------------------
 

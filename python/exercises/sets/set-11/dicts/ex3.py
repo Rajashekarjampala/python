@@ -13,5 +13,5 @@ for i in _keys:
     new_dic[i]=dic[i]
 # print new dict    
 print(new_dic)
-    
+
 

@@ -1,11 +1,11 @@
 ''' 1. Write a program to find larger of two numbers.'''
 
-n1=int(input("enter : n1 ")) 
-n2=int(input("enter : n2 "))
+def check_num(num1,num2):
+  if (num1>num2):
+    return("{} is greater".format(num1))
+  elif(num1==num2):
+    return("{a} is equal to {b}".format(b=num1,a=num2))
+  else:
+    return("{} is greater".format(num2))
 
-if (n1>n2):
-  print("{} is greater".format(n1))
-elif(n1==n2):
-  print("{a} is equal to {b}".format(b=n1,a=n2))
-else:
-  print("{} is greater".format(n2))
+print(check_num(100,200))

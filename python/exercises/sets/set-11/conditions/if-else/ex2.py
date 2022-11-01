@@ -1,10 +1,10 @@
 '''Write a program to read two numbers. Then find out whether the first number is a multiple of the
-second number.'''
+second number'''
 
-n1=int(input("Enter number n1: "))
-n2=int(input("Enter number n2: "))
+def check_num(num1,num2):
+  if(num1%num2==0):
+    return("n1 is multiple of n2: ")
+  else:
+    return("n1 is not multiple of n2: ")
 
-if(n1%n2==0):
-  print("n1 is multiple of n2: ")
-else:
-  print("n1 is not multiple of n2: ")
+print(check_num(20,5))    

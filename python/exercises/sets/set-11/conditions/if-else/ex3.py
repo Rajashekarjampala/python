@@ -1,8 +1,9 @@
 '''4. Write a program to determine whether the character entered is a vowel or not.'''
 
-cha=input("enter charecter: ")
+def check_cha(cha):
+  if (cha in "aeiouAEIOU"):
+    return('vowel')
+  else:
+    return("not vowel") 
 
-if (cha in "aeiouAEIOU"):
-  print('vowel')
-else:
-  print("not vowel") 
+print(check_cha("a"))    

@@ -1,11 +1,12 @@
 '''5. Write a program to find the greatest number from the three numbers'''
-n1=int(input("enter n1: ")) 
-n2=int(input("enter n2: "))
-n3=int(input("enter n3: ")) 
 
-if (n1>n2 and n1>n3):
-  print("{} is greater".format(n1))
-elif(n2>n1 and n2>n3):
-  print("{} is greater".format(n2))
-else:
-  print("{} is greater".format(n3))
+def check_num(num1,num2,num3):
+
+  if (num1>num2 and num1>num3):
+    return("{} is greater".format(num1))
+  elif(num2>num1 and num2>num3):
+    return("{} is greater".format(num2))
+  else:
+    return("{} is greater".format(num3))
+
+print(check_num(10,20,30))

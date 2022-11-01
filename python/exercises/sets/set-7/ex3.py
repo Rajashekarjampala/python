@@ -62,7 +62,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 3
-result=check_repeat([10,21,30,41,50,50,100,11,12,13,21])
+result=check_repeat([10,21,30,41,50,50,100,11,12,13,21,50])
 print("\n")
 print('Testcase 3 Output : {}'.format(result))
 print("\n")
