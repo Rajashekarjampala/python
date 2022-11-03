@@ -6,13 +6,15 @@ Write a function to take a list argument. Find the element that has greatest len
 		Reason: length of science -> 7
 '''
 
-a=['rakesh','raj','python','developer']
-great=[]
-for i in a:
-  great.append(len(i))
-for j in a:
-  if(len(j)==max(great)):
-    print(j)
+#a=['rakesh','raj','python','developer']
+def check_word(a):
+    great=[]
+    for i in a:
+        great.append(len(i))
+    for j in a:
+        if(len(j)==max(great)):
+            return j
+print(check_word(["hello","world","science","maths","Python"]))        
 
 
 a=['rakesh','raj','python','developer']

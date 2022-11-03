@@ -12,8 +12,8 @@ numX=20
 numY=25
 result=funcDict(orgDict=testDict,numX=numX,numY=numY)
 print("Final Result is :: {} ".format(result))
------------------------------------------------------
-def funcDict(orgDict,numX,numY):
+#-----------------------------------------------------
+
   '''
     If the prod of (dict key * dict val) is > sum of number (X+Y), 
     then add it to new dict. Finally iterate and return the new dict.
@@ -29,6 +29,7 @@ def funcDict(orgDict,numX,numY):
   :param numY: Number Y passed by the User. Type is INT.
   :return: New dictionary with filtered values ONLY.
   '''
+def funcDict(orgDict,numX,numY):  
   # Define an empty new mapper
   newMapper={}
   # Sum of numX & numY

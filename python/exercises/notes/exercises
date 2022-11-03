@@ -818,6 +818,250 @@ Objects
     - Mutables
     - Im-Mutables	
 
+
+Exercise Set 12:
+----------------
+
+1. Write a function to take 2 lists and integers numX,numY . 
+	From the listA find all elements that are >er sum(numX+numY). Append those elements to listB.
+	Remove all duplicates from listB.
+	Finally sort and return listB.
+   -------------------------------------------------------------------------------------
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=100
+		numY=10
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [20,40,50,160,300,1000,1100,1300]
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=10
+		numY=10
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : [20,40,50,60,100,160,300,1100,1300]
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		numX=300
+		numY=100
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : []
+
+2. Write a function to take a list argument. Find the element that has greatest length.
+
+	Example :
+		listA=["hello","world","science","maths","Python"]
+		result=func_exec(listA)
+		print(result)
+		Expected Output : ["science"]
+		Reason: length of science -> 7
+
+	Example :
+		listA=["hello","world","science","maths","Pythonics"]
+		result=func_exec(listA)
+		print(result)
+		Expected Output : ["Pythonics"]
+		Reason: length of Pythonics -> 9
+
+	Example :
+		listA=["hello","world","science","maths","Pythonics",1000]
+		result=func_exec(listA)
+		print(result)
+		Expected Output : Raise exception since 1000 is an integer
+
+3. Write a function to calculate the student's grade based on marks obtained in various subjects.
+   There are 4 subjects Maths, Physics, Chemistry, CSE
+   You need to find the sum of all of the marks obtained above and calcuate grade.
+   Here's the table to calculcate the grade
+
+   Note: 
+   	1. You must use **kwargs
+   	2. If the input score is >100 for any subject you must raise exception since max allowed score is 100 ONLY
+   	3. If the input score is non-integer, you must raise exception since scores can be in integers ONLY
+   ----------------------------
+
+	   Total       Grade
+	   ------      ------
+	    400         A+
+	    350-400		 A
+	    300-350     B+
+	    250-300     B
+	    200-250     C
+	    150-200  	 E
+	    <150        F
+
+	Example :
+		result=func_exec(maths=100,physics=100,chemistry=100,cse=100)
+		print(result)
+		Expected Output : "A+"
+
+	Example :
+		result=func_exec(maths=100,physics=80,chemistry=100,cse=90)
+		print(result)
+		Expected Output : "A"
+
+	Example :
+		result=func_exec(maths=100,physics=50,chemistry=100,cse=90)
+		print(result)
+		Expected Output : "B+"
+
+	Example :
+		result=func_exec(maths=50,physics=50,chemistry=50,cse=50)
+		print(result)
+		Expected Output : "C"
+
+	Example :
+		result=func_exec(maths=50,physics=50,chemistry=50,cse=500)
+		print(result)
+		Expected Output : Raise Exception since cse score is 500, max allowed per subject is 100 ONLY
+
+	Example :
+		result=func_exec(maths=50,physics=50,chemistry=50,cse="100")
+		print(result)
+		Expected Output : Raise Exception since cse score is a string "100", scores can be integers ONLY
+
+
+4. Write a function to take a number numX, numY followed by any number of integer arguments. 
+	You need to find all numbers divisible by numX and numY
+	Filter all the numbers from the list that are divisible numX and numY and add to new list.
+	Finally return the new list.
+
+	Note: You must use *args in your function implementation
+	*********************************************************
+
+	Example :
+		numX=20
+		numY=10
+		result=func_exec(numX,20,40,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [20,40,60,80,100]
+
+	Example :
+		numX=25
+		numY=5		
+		result=func_exec(numX,50,60,80,90,100,70)
+		print(result)
+		Expected Output : [50,100]
+
+	Example :
+		numX=7
+		numY=12		
+		result=func_exec(numX,20,40,50,70)
+		print(result)
+		Expected Output : []
+
+
+5. Write a function to take 2 lists. Use zip function to iterate the list and pick values that
+   are common at both indexes.
+
+	Example :
+		listA=[100,20,300,40,50,60,100]
+		listB=[1100,20,1300,40,50,160,1000]
+		result=func_exec(listA,listB)
+		print(result)
+		# 20 -> listA[1] == listB[1]
+		# 40 -> listA[3] == listB[3]
+		# 50 -> listA[4] == listB[4]
+		Expected Output : [20,40,50]
+
+	Example :
+		listA=[1001,201,3001,401,501,601,1001]
+		listB=[1100,20,1300,40,50,160,1000]
+		result=func_exec(listA,listB)
+		print(result)
+		Expected Output : []
+
+6. Write a function to take a dict as argument. Sort the dict by keys and return the dict.
+
+	Example : 
+			testDict={1:4,10:20,3:4,4:7,60:11,12:9}
+			result=func_exec(testDict)
+			print(result)
+			Expected Output : {1:4,3:4,4:7,12:9,20:3,60:11}
+
+7. Write a function to take a dict as argument. Sort the dict by values and return the dict.
+
+	Example : 
+			testDict={1:4,10:20,3:40,4:7,60:11,12:9}
+			result=func_exec(testDict)
+			print(result)
+			Expected Output : {1:4,4:7,12:9,60:11,10:20,3:40}
+
+
+8. Write a function to take a dict as argument. Find the key that has max value.
+
+	Example : 
+			testDict={1:4,10:20,3:40,4:7,60:11,12:9}
+			result=func_exec(testDict)
+			print(result)
+			Expected Output : {3:40}
+			Reason: Key "3" has value of "40" >er than other values
+
+
+9. Write a function to calculate the employee hike based on appraisal rating.
+   
+   Note: 
+   	1. You must use **kwargs
+   	2. If the rating score is >100 for any employee you must raise exception since max allowed score is 100 ONLY
+   	3. If the input score is non-integer, you must raise exception since scores can be in integers ONLY
+   	4. Formula for new salary calculation:
+   		new_salary= ((hike/100)*old_salary)+old_salary
+   		Example:
+   		---------
+   			curr_salary=100000
+   			hike=30
+   			new_salary=((30/100)*100000)+100000
+   			new_salary=130000
+
+   			curr_salary=50000
+   			hike=10
+   			new_salary=((10/100)*50000)+50000
+   			new_salary=55000
+
+   ----------------------------------------------------------------------------------------------------------------
+
+   Here's the table to calculcate the hike
+
+	   Total       Hike%
+	   ------      ------
+	    100         30
+	    90-100      24
+	    80-90       17
+	    70-80       12
+	    60-70       8
+	    50-60       4
+	    <50         1
+
+	Example :
+		result=func_exec(rating=100,curr_salary=100000)
+		print(result)
+		Expected Output : {"hike":"30","new_salary":"130000"}
+
+	Example :
+		result=func_exec(rating=49,curr_salary=100000)
+		print(result)
+		Expected Output : {"hike":"1","new_salary":"101000"}
+
+	Example :
+		result=func_exec(rating=200,curr_salary=50000)
+		print(result)
+		Expected Output : Raise Exception since rating score is 200, max allowed rating score is 100 ONLY
+
+	Example :
+		result=func_exec(rating="100",curr_salary=50000)
+		print(result)
+		Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
+
+
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------

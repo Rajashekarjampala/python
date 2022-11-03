@@ -27,21 +27,31 @@ Iterate the orginal list
         continue the loop  
 Add finally retun the new list
 '''
-# This function is define most number of times element
-def check_repeat(org_list):
-
-  #define new empty list 
-  new_list=[]  
-  #iterates original list on by one  
-  for i in org_list:
-    #checking for number not present in new list    
-    if(i not in new_list):
-      #checking fo number than occurs repeatedly      
-      if(org_list.count(i)>1):
-        #ads number to new list
-        new_list.append(i)
-  #finally returns new list        
-  return new_list
+# Define function
+def check_repeat(listA):
+  # define empty dic
+  new_dict={}
+  #Iterate the original list
+  for i in listA:
+    # count the numbers from original list
+    count=listA.count(i)
+    # count more than one element
+    if(count>1):
+      # Update new dic
+      new_dict[i]=count
+      
+  # Define new list    
+  new_list=[]
+  # from new dic store the values in variable
+  val=new_dict.values()
+  # Iterate the new dic
+  for k,v in new_dict.items():
+      # find the max repeat num from dic (dic value)
+      if(v==max(val)):
+        # repeat numbers add to new list
+        new_list.append(k)
+  # Finally return the new_list      
+  return new_list      
 
 # Execution
 #calling function
@@ -70,7 +80,7 @@ print("-"*50)
 print("\n")
 # ------------------------------------------------------------------#
 #Testcase 4
-result=check_repeat([1,2,3,4,5,6,7,8,9,10])
+result=check_repeat([1,2,3,4,5,6,7,8,9,10,1,2,1])
 print("\n")
 print('Testcase 4 Output : {}'.format(result))
 print("\n")
