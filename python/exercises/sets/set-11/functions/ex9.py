@@ -34,19 +34,19 @@
         Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
 '''
 #define a function with arguments **kwargs
-def check(**appraisal_rating):
+def check(**appr):
     #define new_dic dict
     new_dic={}
     #iterates argumnts using **kwargs
-    for key,value in appraisal_rating.items():
+    for _key,_value in appr.items():
       #adding key and  values to new_dic dict
-      new_dic[key]=value
+      new_dic[_key]=_value
     #assigined rate from new_dic dict
     rate=new_dic['rating']
     #assigned salary from new_dic dict
     salary=new_dic['cur_salary']
     #checking whether the rate is NON-integer type
-    if(type(rate)==str):
+    if(type(rate)==str or type(salary)==str):
             return ('Scores can be in integers only')
     #checking whether the rate is greater than 100
     elif(rate>100):

@@ -30,6 +30,7 @@ Finally return the new list.
         result=func_exec(listA)
         print(result)
         Expected Output : []
+        
         :param org_list: Original list passed by the User
         :param numx: Numberx passed by the User. Type is INT.
         :param numy: Numbery passed by the User. Type is INT.

@@ -32,53 +32,64 @@
         result=func_exec(rating="100",curr_salary=50000)
         print(result)
         Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
+**kwargs :
+    - The **kwargs arguments are passed as a dictionary and these arguments like key and value
+    - We can pass a variable number of arguments to a function using special **kwargs                
+
+    :param **appr: a **kwarg appr given by the User.as rating and cur_salary
+    :return :return new salary as per rating with addition of hike%
+
+    Solution Steps:
+    **************
+    Take a **kwarg with rating and current salary.
+    Check max allowed score is 100 Only
+    Check scores can be in integers Only
+    Check for hike categories as per rating.
+    Finally return new salary with addition of hike.
+
 '''
 #define a function with arguments **kwargs
-def check(**appraisal_rating):
-    #define new_dic dict
-    new_dic={}
-    #iterates argumnts using **kwargs
-    for key,value in appraisal_rating.items():
-      #adding key and  values to new_dic dict
-      new_dic[key]=value
-    #assigined rate from new_dic dict
-    rate=new_dic['rating']
-    #assigned salary from new_dic dict
-    salary=new_dic['cur_salary']
+def check(**appr):
+    
+    #assigined rate from appr
+    rate=appr['rating']
+    #assigned salary from appr
+    salary=appr['cur_salary']
+    
     #checking whether the rate is NON-integer type
-    if(type(rate)==str):
-            return ('Scores can be in integers only')
+    if(type(rate)==str or type(salary)==str):
+      return ('Scores can be in integers only')
     #checking whether the rate is greater than 100
     elif(rate>100):
       return 'Max allowed score is 100 ONLY'
-    #checking whetehr tht rate is 100
+    #checking wheter the rate is 100
     elif(rate==100):
     #reurn new_dic salary with extra 30%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*30/100))
+      return {'hike':rate,'new_salary':salary+(30*salary/100)}
     #checking whether the rate is less than 100 and greater than or equal to 90
     elif(rate<100 and rate>=90):
       #return new_dic salary with extra 24%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*24/100))
+      return {'hike':rate,'new_salary':salary+(24*salary/100)}
     #checking whether the rate is less than 90 and greater than or equals to 80
     elif(rate<90 and rate>=80):
       #return new_dic salary with extra 17%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*17/100))
+      return {'hike':rate,'new_salary':salary+(17*salary/100)}
     #checking whether the rate less than 80 and greater than or equals to 70
     elif(rate<80 and rate>=70):
       #return new_dic salary with extra 12%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*12/100))
+      return{'hike':rate,'new_salary':salary+(12*salary/100)}
     #checking whether the rate less than 70 and greater than or equals to 60
     elif(rate<70 and rate>=60):
       #return new_dic salary with extra 8%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*8/100))
+      return {'hike':rate,'new_salary':salary+(8*salary/100)}
     #checking whether the rate is less than 60 and greaater than or equals to 50
     elif(rate<60 and rate>=50):
       #return new_dic salary with extra 4%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*4/100))
+      return {'hike':rate,'new_salary':salary+(4*salary/100)}
     #checking whether the rate is less than 50
     elif(rate<50):
         #return new_dic salary with extra 1%
-      return 'hike:{},new_dic_salary:{}'.format(rate,salary+(salary*1/100))
+      return {'hike':rate,'new_salary':salary+(1*salary/100)}
 
 #Calling Function       
 result=check(rating=100,cur_salary=100000)

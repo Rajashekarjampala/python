@@ -17,7 +17,22 @@
         200-250     C
         150-200     E
         <150        F
-        
+
+**kwargs :
+    - The **kwargs arguments are passed as a dictionary and these arguments like key and value
+    - We can pass a variable number of arguments to a function using special **kwargs        
+
+    :param **Subject_marks: a **kwargs given by the User.keys as subjects and values as marks.    
+    :return: return the Grade obtained by their marks.
+
+    Solution Steps:
+    **************
+    Take subject_marks as **kwargs.
+    Iterate the Subject_marks and calculate the Total marks Obtained by the students.
+    Check Max allowed score is 100 Only
+    Check scores can be in integers Only
+    Checking the categories by the there total marks.
+    Finally return the Grade obtained by the student.        
 '''
 #define Function with **kwargs
 def check(**Subject_marks):
