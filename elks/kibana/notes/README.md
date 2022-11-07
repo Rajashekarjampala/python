@@ -68,9 +68,8 @@ SECTION 3:
                 kubectl describe  svc <svc-name> -n <namespace-name>  
 
             - Edit Service by using below command
-                kubectl edit  svc <svc-name> -n <namespace-name>
-    
-               
+                kubectl edit  svc <svc-name> -n <namespace-name>   
+
 SECTION 4:
 ---------
     # Deploying kibana using HELM
@@ -84,8 +83,60 @@ SECTION 5:
         1. Access kibana in UI
 
         2. CREATE/DELETE/UPDATE Indexes
-            CREATE : 
+            - In Elasticsearch, data is stored as documents. A document is a JSON object format. 
+            - Each document has a unique ID.
+            - In a JSON object, you have a list of fields or key value pairs.
+             
+            CREATE--> Create an index        
+                - PUT <Name-of-the-Index>
 
+                - To create an index, we use verb PUT followed by the name of the index
+                - When index is used as a verb, it means that we are storing documents.
+
+            POST:
+                - You use POST it will autogenerate an id for your document. 
+
+                POST emp_data/_doc
+                {
+                "first_name": "Rajashekar",
+                "last_name": "Jampala"
+                "emp_id": "143"
+                "Emp_age": "25"
+                }     
+
+                - You use the verb PUT when you want to assign a specific id to your document
+                - If only use put was an easier way to index and find these documents.
+
+                PUT emp_data/_doc/1       # 1 is the index unique ID
+                {
+                "first_name": "Rajashekar",
+                "last_name": "Jampala"
+                }
+
+            READ--> Read a document
+                - We use the following syntax to read the previously created document.
+                GET emp_data/_doc/id
+
+                - This request directs kibana to GET from emp_data index a document(_doc) with an id of 1
+
+            UPDATE--> Update a document
+                - There will be times when you will want to update an existing document
+
+                - You will use the following syntax to update a field of a document.
+
+                POST emp_data/_update/1_update
+                {
+                    "doc": {
+                        "age": "26"     # Update the employee age
+                    }
+                } 
+
+            DELETE--> Delete a document
+                - The following syntax is used to delete a document.
+                DELETE emp_data/_doc/1_delete
+
+                - Then it will delete the emp_data Index  
+      
         3. kubectl commands for kibana
 
 SECTION 6:
