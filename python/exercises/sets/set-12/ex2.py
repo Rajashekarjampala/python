@@ -32,13 +32,13 @@ def check_word(org_list):
 	# Maximun length is start from 0 
     max_len=0
 	# Iterate the original list
-    for i in org_list:
+    for element in org_list:
 		# Check condition for length of the list is greater than 0
-        if (len(i)>max_len):
+        if (len(element)>max_len):
 			# max length of element from the list
-            max_len=len(i)
+            max_len=len(element)
 			# result is Assign to variable 
-            gre_len=i
+            gre_len=element
 	# Finally return the greatest length word from list			
     return gre_len        
             

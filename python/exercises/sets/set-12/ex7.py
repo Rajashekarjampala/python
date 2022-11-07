@@ -7,6 +7,18 @@
 			print(result)
 			Expected Output : {1:4,4:7,12:9,60:11,10:20,3:40}
 
+            :param org_dic: Original dictionary passed by the User
+            :return: New dic with filtered values ONLY
+Solution Steps:
+**************
+Define the the function 
+  We can take one empty dictionary
+  Sort the dictionary value and store in variable
+  Iterate the original dictionary
+  Sorted values are add to the empty dictionary 
+  Return the empty dictionary 
+Print empty dictionary  
+
 '''
 #define a function 
 def check(dic):

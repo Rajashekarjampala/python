@@ -32,6 +32,21 @@
         result=func_exec(rating="100",curr_salary=50000)
         print(result)
         Expected Output : Raise Exception since rating score is a string "100", rating scores can be integers ONLY
+**kwargs :
+    - The **kwargs arguments are passed as a dictionary and these arguments like key and value
+    - We can pass a variable number of arguments to a function using special **kwargs                
+
+    :param **appr: a **kwarg appr given by the User.as rating and cur_salary
+    :return :return new salary as per rating with addition of hike%
+
+    Solution Steps:
+    **************
+    Take a **kwarg with rating and current salary.
+    Check max allowed score is 100 Only
+    Check scores can be in integers Only
+    Check for hike categories as per rating.
+    Finally return new salary with addition of hike.
+
 '''
 #define a function with arguments **kwargs
 def check(**appr):

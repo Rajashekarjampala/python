@@ -18,6 +18,20 @@
 		result=func_exec(listA,listB)
 		print(result)
 		Expected Output : []
+
+		:param org_listA: Original list ListA passed by the User
+		:param org_listB: Original list ListB passed by the User
+        :return: New list with filtered values ONLY.  
+
+Solution Steps:
+**************
+Iterate the orginal lists Using zip function
+    Check the comman elements in both indexes in listA and listB
+        If yes:
+            Add to new list
+        else:
+            continue the loop
+    Finally return the new list
 '''
 #define a function 
 def check(OrgListA,OrgListB):
@@ -37,4 +51,4 @@ result=check([100,20,300,40,50,60,100],[1100,20,1300,40,50,160,1000])
 print('Final out : {}'.format(result))
 
 result=check([1001,201,3001,401,501,601,1001],[1100,20,1300,40,50,160,1000])
-print('Final out : {}'.format(result))
+print('Final out : {}'.format(result)) 
