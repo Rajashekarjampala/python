@@ -47,12 +47,21 @@ SECTION 3:
             - To deploy the kibana by using below command specified namespace
                 kubectl create -f service.yml -n <Namespace>
 
+            - Check the deployment by using below command
+                kubectl get deployments -n <namespece>  
+
+            - Check the pods by using below command   
+                kubectl get pods -n <namespece> 
+
         2. Service Spec
             - We can create Service yml file for kibana
                 vi service.yml
 
             - To deploy the kibana by using below command specified namespace
                 kubectl create -f service.yml -n <Name_space>
+
+            - Check the service by using below command
+                kubectl get svc -n <namespece>      
 
             - Kibana UI Access using localhost:port or VM_IP:5601
 
