@@ -95,26 +95,26 @@ SECTION 5:
             POST:
                 - You use POST it will autogenerate an id for your document. 
 
-                POST emp_data/_doc
-                {
-                "first_name": "Rajashekar",
-                "last_name": "Jampala"
-                "emp_id": "143"
-                "Emp_age": "25"
-                }     
+                    POST emp_data/_doc
+                    {
+                    "first_name": "Rajashekar",
+                    "last_name": "Jampala"
+                    "emp_id": "143"
+                    "Emp_age": "25"
+                    }     
  
                 - You use the verb PUT when you want to assign a specific id to your document
                 - If only use put was an easier way to index and find these documents.
 
-                PUT emp_data/_doc/1       # 1 is the index unique ID
-                {
-                "first_name": "Rajashekar",
-                "last_name": "Jampala"
-                }
+                    PUT emp_data/_doc/1       # 1 is the index unique ID
+                    {
+                    "first_name": "Rajashekar",
+                    "last_name": "Jampala"
+                    }
 
             READ--> Read a document
                 - We use the following syntax to read the previously created document.
-                GET emp_data/_doc/id
+                    GET emp_data/_doc/id
 
                 - This request directs kibana to GET from emp_data index a document(_doc) with an id of 1
 
@@ -123,16 +123,16 @@ SECTION 5:
 
                 - You will use the following syntax to update a field of a document.
 
-                POST emp_data/_update/1_update
-                {
-                    "doc": {
-                        "age": "26"     # Update the employee age
-                    }
-                } 
+                    POST emp_data/_update/1_update
+                    {
+                        "doc": {
+                            "age": "26"     # Update the employee age
+                        }
+                    } 
 
             DELETE--> Delete a document
                 - The following syntax is used to delete a document.
-                DELETE emp_data/_doc/1_delete
+                    DELETE emp_data/_doc/1_delete
 
                 - Then it will deleted the emp_data Index  
       
@@ -175,7 +175,8 @@ SECTION 7:
        
 SECTION 8:
 ----------
-# Kibana deployment yml file
+Kibana deployment yml file
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -214,7 +215,8 @@ spec:
           name: ui
           protocol: TCP
 
-# Kibana Service yml file
+Kibana Service yml file
+
 apiVersion: v1
 kind: Service
 metadata:
