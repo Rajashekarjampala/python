@@ -10,7 +10,6 @@ SECTION 1:
         - Application performance monitoring (APM)
         - Geospatial data analysis and visualization
         - Monitoring, managing, and securing an Elastic Stack instance via web interface.
-        - Kibana dashboard is a collection of charts, graphs, metrics, searches, and maps that have been    collected together onto a single pane.
 
 SECTION 2:
 ---------
@@ -55,7 +54,7 @@ SECTION 3:
             - To deploy the kibana by using below command specified namespace
                 kubectl create -f service.yml -n <Name_space>
 
-            - Kibana UI Access using localhost:port or VM_IP:port
+            - Kibana UI Access using localhost:port or VM_IP:5601
 
         3. kubectl commands for debug
             - Describe the pod by using below command
@@ -103,7 +102,7 @@ SECTION 5:
                 "emp_id": "143"
                 "Emp_age": "25"
                 }     
-
+ 
                 - You use the verb PUT when you want to assign a specific id to your document
                 - If only use put was an easier way to index and find these documents.
 
@@ -135,20 +134,45 @@ SECTION 5:
                 - The following syntax is used to delete a document.
                 DELETE emp_data/_doc/1_delete
 
-                - Then it will delete the emp_data Index  
+                - Then it will deleted the emp_data Index  
       
-        3. kubectl commands for kibana
-
 SECTION 6:
 ---------
     # kibana UI Access
-        1. UI Link
+        - http://10.208.41.125:5601
 
 SECTION 7:
 ---------
     # REST API Commands for all CRUD
-        - Hello
+        - Create an Index on kibana by using below command
+            curl -XPUT "http://10.208.41.125:5601/emp_data" 
 
+        - To verify Index created or not by using below command
+            curl -XGET "http://10.208.41.125:5601/emp_data" 
+
+        - Insert our date into our index by using below command
+            curl -XPOST "http://10.208.41.125:5601/emp_data/_doc/1" -H 'Content-Type: application/json' -d' 
+            {
+            "Emp_name": "Rajashekar",
+            "Emp_id": "143",
+            "Age": 25,
+            "Gender": "male",
+            "Address": "Hyderabad"
+            }'  
+
+        - Update data in to our index by using below command
+            curl -XPOST "http://10.208.41.125:5601/emp_data/_doc/1" -H 'Content-Type: application/json' -d'
+            {
+            "Emp_name": "Rajashekar",
+            "Emp_id": "12345",     # Update emp_id
+            "Age": 25,
+            "Gender": "male",
+            "Address": "Hyderabad"
+            }' 
+
+        - Delete in our index by using below command
+            curl -XDELETE "http://10.208.41.125:5601/emp_data"  
+       
 SECTION 8:
 ----------
 # Kibana deployment yml file
@@ -184,7 +208,7 @@ spec:
             cpu: 100m
         env:
           - name: ELASTICSEARCH_URL
-            value: http://10.74.190.127:31931/
+            value: http://10.208.41.125:5601/
         ports:
         - containerPort: 5601
           name: ui
@@ -209,8 +233,7 @@ spec:
     targetPort: ui
     nodePort: 31336
   selector:
-    app: kibana          
-
+    app: kibana         
 
 SECTION 9:
 ---------
