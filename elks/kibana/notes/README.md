@@ -177,43 +177,43 @@ SECTION 8:
 ----------
 Kibana deployment yml file
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: kibana
-  namespace: kibana
-  labels:
-    app: kibana
-    kubernetes.io/cluster-service: "true"
-    addonmanager.kubernetes.io/mode: Reconcile
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: kibana
-  template:
+    apiVersion: apps/v1
+    kind: Deployment
     metadata:
-      labels:
+    name: kibana
+    namespace: kibana
+    labels:
         app: kibana
-      annotations:
-        seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
+        kubernetes.io/cluster-service: "true"
+        addonmanager.kubernetes.io/mode: Reconcile
     spec:
-      containers:
-      - name: kibana
-        image: docker.elastic.co/kibana/kibana-oss:6.5.4
-        resources:
-          # need more cpu upon initialization, therefore burstable class
-          limits:
-            cpu: 1000m
-          requests:
-            cpu: 100m
-        env:
-          - name: ELASTICSEARCH_URL
-            value: http://10.208.41.125:5601/
-        ports:
-        - containerPort: 5601
-          name: ui
-          protocol: TCP
+    replicas: 1
+    selector:
+        matchLabels:
+        app: kibana
+    template:
+        metadata:
+        labels:
+            app: kibana
+        annotations:
+            seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
+        spec:
+        containers:
+        - name: kibana
+            image: docker.elastic.co/kibana/kibana-oss:6.5.4
+            resources:
+            # need more cpu upon initialization, therefore burstable class
+            limits:
+                cpu: 1000m
+            requests:
+                cpu: 100m
+            env:
+            - name: ELASTICSEARCH_URL
+                value: http://10.208.41.125:5601/
+            ports:
+            - containerPort: 5601
+            name: ui
+            protocol: TCP
 
 Kibana Service yml file
 
