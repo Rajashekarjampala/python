@@ -328,4 +328,5 @@ SECTION 9:
         - https://www.youtube.com/watch?v=pL_0qKxIWZE
         - https://www.elastic.co/guide/en/kibana/current/docker.html
         - https://dev.to/elastic/performing-crud-operations-with-elasticsearch-kibana-50ka
+        - https://www.elastic.co/guide/en/elasticsearch/reference/7.17/docs-bulk.html
 
