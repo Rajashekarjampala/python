@@ -88,7 +88,7 @@ SECTION 4:
                 kubectl edit  svc <svc-name> -n <namespace-name>   
 
 SECTION 5:
-    # Kibana Deployment SPEC
+    - Kibana Deployment SPEC
     
         apiVersion: apps/v1
         kind: Deployment
@@ -129,7 +129,7 @@ SECTION 5:
                     protocol: TCP
 
 SECTION 6:
-    # Kibana Service SPEC 
+    - Kibana Service SPEC 
 
         apiVersion: v1
         kind: Service
