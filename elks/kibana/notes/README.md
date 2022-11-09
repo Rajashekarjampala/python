@@ -95,7 +95,8 @@ SECTION 4:
                 kubectl edit  svc <svc-name> -n <namespace-name>   
 
 SECTION 5:
-    # Kibana Deployment SPEC
+---------
+    # Kibana Deployment SPEC:
     
         apiVersion: apps/v1
         kind: Deployment
