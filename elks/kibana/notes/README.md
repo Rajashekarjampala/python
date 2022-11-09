@@ -4,6 +4,7 @@
 SECTION 1:
 ---------
     # What's kibana and why we use it ?
+
         - Kibana is an open source browser based visualization tool.
         - Searching, viewing, and visualizing data indexed in Elasticsearch and analyzing the data
         - By using data Creation of bar charts, pie charts, tables, histograms, and maps
@@ -16,7 +17,8 @@ SECTION 1:
 
 SECTION 2:
 ---------
-    # What's kibana dashboard?  
+    # What's kibana dashboard? 
+     
         - Kibana dashboard is a collection of charts, graphs, metrics, searches, and maps
           that have been collected together on a single pane.
         - Kibana Dashboards create views that pull together charts, maps, to display the full picture of your data
@@ -108,60 +110,62 @@ SECTION 5:
             kubernetes.io/cluster-service: "true"
             addonmanager.kubernetes.io/mode: Reconcile
         spec:
-        replicas: 1
-        selector:
+          replicas: 1
+          selector:
             matchLabels:
-            app: kibana
-        template:
+              app: kibana
+          template:
             metadata:
-            labels:
+              labels:
                 app: kibana
-            annotations:
+              annotations:
                 seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
-                spec:
-                containers:
-                - name: kibana
+            spec:
+              containers:
+              - name: kibana
                 image: docker.elastic.co/kibana/kibana-oss:6.5.4
                 resources:
                 # need more cpu upon initialization, therefore burstable class
-                    limits:
+                  limits:
                     cpu: 1000m
-                    requests:
+                  requests:
                     cpu: 100m
                 env:
-                    - name: ELASTICSEARCH_URL
+                  - name: ELASTICSEARCH_URL
                     value: http://10.208.41.125:5601/
                 ports:
-                    - containerPort: 5601
+                - containerPort: 5601
                     name: ui
                     protocol: TCP
 
 SECTION 6:
+---------
     # Kibana Service SPEC 
 
         apiVersion: v1
         kind: Service
         metadata:
-        name: kibana
-        namespace: kibana
-        labels:
+          name: kibana
+          namespace: kibana
+          labels:
             app: kibana
             kubernetes.io/cluster-service: "true"
             addonmanager.kubernetes.io/mode: Reconcile
             kubernetes.io/name: "Kibana"
         spec:
-        type: NodePort
-        ports:
-        - port: 5601
+          type: NodePort
+          ports:
+          - port: 5601
             protocol: TCP
             targetPort: ui
             nodePort: 31336
-        selector:
+          selector:
             app: kibana         
 
 SECTION 7:
 ---------
     # Verification post installation
+
         1. Access kibana in UI
 
         2. CREATE/DELETE/UPDATE Indexes
@@ -325,70 +329,6 @@ SECTION 8:
             {"update":{"_index":"emp_data","_id":"4"}}
             {"name":"ramesh,"desc":"sr_devops"}            
        
-SECTION 8:
-----------
-Kibana deployment yml file
-
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
-      name: kibana
-      namespace: kibana
-      labels:
-        app: kibana
-        kubernetes.io/cluster-service: "true"
-        addonmanager.kubernetes.io/mode: Reconcile
-    spec:
-      replicas: 1
-      selector:
-        matchLabels:
-          app: kibana
-      template:
-        metadata:
-          labels:
-            app: kibana
-          annotations:
-            seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
-            spec:
-              containers:
-              - name: kibana
-              image: docker.elastic.co/kibana/kibana-oss:6.5.4
-              resources:
-             # need more cpu upon initialization, therefore burstable class
-                limits:
-                  cpu: 1000m
-                requests:
-                  cpu: 100m
-              env:
-                - name: ELASTICSEARCH_URL
-                value: http://10.208.41.125:5601/
-              ports:
-                - containerPort: 5601
-                name: ui
-                protocol: TCP
-
-Kibana Service yml file
-
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: kibana
-      namespace: kibana
-      labels:
-        app: kibana
-        kubernetes.io/cluster-service: "true"
-        addonmanager.kubernetes.io/mode: Reconcile
-        kubernetes.io/name: "Kibana"
-    spec:
-      type: NodePort
-      ports:
-      - port: 5601
-        protocol: TCP
-        targetPort: ui
-        nodePort: 31336
-      selector:
-        app: kibana         
-
 SECTION 9:
 ---------
     # References
