@@ -16,7 +16,12 @@ SECTION 1:
 
 SECTION 2:
 ---------
+    # What's kibana dashboard?        
+
+SECTION 3:
+---------
     # Deploying kibana using Dockers :
+
         - Docker images for Kibana are available from the Elastic Docker registry
         - Before pull Docker Image (Kibana image) We have to create the Docker network
 
@@ -32,9 +37,10 @@ SECTION 2:
         - Kibana default port number is 5601
         - We can access the kibana UI Access using localhost:5601 or VM_IP:5601        
         
-SECTION 3:
+SECTION 4:
 ---------
     # Deploying kibana using Kubernetes :
+
         - First we have to create name space for kibana
 
         - Name Space create by using below command
@@ -81,14 +87,71 @@ SECTION 3:
             - Edit Service by using below command
                 kubectl edit  svc <svc-name> -n <namespace-name>   
 
-SECTION 4:
----------
-    # Deploying kibana using HELM
-        1. HELM Charts
-        2. HELM commands for bring-up
-        3. HELM commands for debug
-
 SECTION 5:
+    # Kibana Deployment SPEC
+    
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: kibana
+      namespace: kibana
+      labels:
+        app: kibana
+        kubernetes.io/cluster-service: "true"
+        addonmanager.kubernetes.io/mode: Reconcile
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: kibana
+      template:
+        metadata:
+          labels:
+            app: kibana
+          annotations:
+            seccomp.security.alpha.kubernetes.io/pod: 'docker/default'
+            spec:
+              containers:
+              - name: kibana
+              image: docker.elastic.co/kibana/kibana-oss:6.5.4
+              resources:
+             # need more cpu upon initialization, therefore burstable class
+                limits:
+                  cpu: 1000m
+                requests:
+                  cpu: 100m
+              env:
+                - name: ELASTICSEARCH_URL
+                value: http://10.208.41.125:5601/
+              ports:
+                - containerPort: 5601
+                name: ui
+                protocol: TCP
+
+SECTION 6:
+    # Kibana Service SPEC 
+
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: kibana
+      namespace: kibana
+      labels:
+        app: kibana
+        kubernetes.io/cluster-service: "true"
+        addonmanager.kubernetes.io/mode: Reconcile
+        kubernetes.io/name: "Kibana"
+    spec:
+      type: NodePort
+      ports:
+      - port: 5601
+        protocol: TCP
+        targetPort: ui
+        nodePort: 31336
+      selector:
+        app: kibana         
+
+SECTION 7:
 ---------
     # Verification post installation
         1. Access kibana in UI
@@ -148,14 +211,10 @@ SECTION 5:
 
                 - Then it will deleted the emp_data Index  
       
-SECTION 6:
+SECTION 8:
 ---------
-    # kibana UI Access
-        - http://10.208.41.125:5601
+    # kibana REST API Commands for all CRUD
 
-SECTION 7:
----------
-    # REST API Commands for all CRUD
         - Create an Index on kibana by using below command
             curl -XPUT "http://10.208.41.125:5601/emp_data" 
 
@@ -325,6 +384,7 @@ Kibana Service yml file
 SECTION 9:
 ---------
     # References
+
         - https://www.youtube.com/watch?v=pL_0qKxIWZE
         - https://www.elastic.co/guide/en/kibana/current/docker.html
         - https://dev.to/elastic/performing-crud-operations-with-elasticsearch-kibana-50ka
