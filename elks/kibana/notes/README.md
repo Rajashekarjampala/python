@@ -184,6 +184,78 @@ SECTION 7:
 
         - Delete in our index by using below command
             curl -XDELETE "http://10.208.41.125:5601/emp_data"  
+
+    # Bulk API for Multiple Document Indexing and Modification
+
+        Create bulk indexes:
+            curl -XPOST "http://10.208.41.125:5601/_bulk" -H 'Content-Type: application/json' -d' 
+            {"create" : {"_index":"emp_data", "_id":"1"}}
+            {"name":"Rajashekar", "emp_id":"143", "dob":"1997","desc":"Devops", "address":"hyderabad", "age":"25"}
+            {"create" : {"_index":"emp_data", "_id":"2"}}
+            {"name":"Sai maneesh", "emp_id":"123", "dob":"1998","desc":"tester", "address":"nellur", "age":"24"}
+            {"create" : {"_index":"emp_data", "_id":"3"}}
+            {"name":"Venkat", "emp_id":"456", "dob":"1995","desc":"developer", "address":"guntur", "age":"26"}
+            {"create" : {"_index":"emp_data", "_id":"4"}}
+            {"name":"Rakesh", "emp_id":"789", "dob":"1990","desc":"tech_spec", "address":"chennai", "age":"32"}
+            {"create" : {"_index":"emp_data", "_id":"5"}}
+            {"name":"Gowtham", "emp_id":"112", "dob":"1980","desc":"Team_lead", "address":"bangulur", "age":"40"}
+            {"create" : {"_index":"emp_data", "_id":"6"}}
+            {"name":"sunil", "emp_id":"321", "dob":"1992","desc":"jr_developer", "address":"mumbai", "age":"30"}
+            {"create" : {"_index":"emp_data", "_id":"7"}}
+            {"name":"kumar", "emp_id":"555", "dob":"1970","desc":"manager", "address":"pune", "age":"52"}
+            {"create" : {"_index":"emp_data", "_id":"8"}}
+            {"name":"karthik", "emp_id":"900", "dob":"1972","desc":"gen_manager", "address":"kadapa", "age":"50"}
+            {"create" : {"_index":"emp_data", "_id":"9"}}
+            {"name":"prashanth", "emp_id":"210", "dob":"1993","desc":"asso_engg", "address":"ranchi", "age":"23"}
+            {"create" : {"_index":"emp_data", "_id":"10"}}
+            {"name":"sravika", "emp_id":"560", "dob":"1984","desc":"repo_manager", "address":"tirupati", "age":"35"}
+            {"create" : {"_index":"emp_data", "_id":"11"}}
+            {"name":"sony", "emp_id":"987", "dob":"1999","desc":"jr_trainee", "address":"mncl", "age":"23"}
+            {"create" : {"_index":"emp_data", "_id":"12"}}
+            {"name":"sanjana", "emp_id":"300", "dob":"1998","desc":"jr_engg", "address":"lb_nagar", "age":"22"}
+            {"create" : {"_index":"emp_data", "_id":"13"}}
+            {"name":"sravani", "emp_id":"380", "dob":"1994","desc":"typist", "address":"kachiguda", "age":"26"}
+            {"create" : {"_index":"emp_data", "_id":"14"}}
+            {"name":"pooja", "emp_id":"777", "dob":"1988","desc":"security", "address":"koti", "age":"32"}
+            {"create" : {"_index":"emp_data", "_id":"15"}}
+            {"name":"aruna", "emp_id":"760", "dob":"1990","desc":"trainer", "address":"kukatpally", "age":"30"}
+
+        Update bulk indexes:
+            curl -XPOST "http://10.208.41.125:5601/_bulk" -H 'Content-Type: application/json' -d' 
+            {"update" : {"_index":"emp_data", "_id":"3"}}
+            {"doc": {"desc":"senior manager"}}
+            {"update" : {"_index":"emp_data", "_id":"5"}}
+            {"doc": {"address":"ananthapur"}}
+            {"update" : {"_index":"emp_data", "_id":"6"}}
+            {"doc": {"desc":"sr_develpoer"}}
+            {"update" : {"_index":"emp_data", "_id":"10"}}
+            {"doc": {"age":"25"}}
+            {"update" : {"_index":"emp_data", "_id":"2"}}
+            {"doc": {"dob":"27"}}
+
+        Delete bulk indexes:   
+            curl -XPOST "http://10.208.41.125:5601/_bulk" -H 'Content-Type: application/json' -d'
+            {"delete" : {"_index":"emp_data", "_id":"1"}}
+            {"delete" : {"_index":"emp_data", "_id":"12"}}
+            {"delete" : {"_index":"emp_data", "_id":"4"}}
+            {"delete" : {"_index":"emp_data", "_id":"13"}}
+            {"delete" : {"_index":"emp_data", "_id":"15"}}
+            {"delete" : {"_index":"emp_data", "_id":"7"}}
+
+        Search bulk indexes:
+            curl -XGET "http://10.208.41.125:5601/emp_data/_search" -H 'Content-Type: application/json' -d'
+            {
+                "query": {
+                    "match_all": {}
+                }
+            }
+
+        Performs multiple Indexing, Updating, Deleting operations in a single API call:
+            {"create":{"_index":"emp_data", "_id":"16"}}
+            {"name":"mahesh","desc":"pro_manager"}
+            {"delete":{"_index":"employee", "_id":"5"}}
+            {"update":{"_index":"emp_data","_id":"4"}}
+            {"name":"ramesh,"desc":"sr_devops"}            
        
 SECTION 8:
 ----------
