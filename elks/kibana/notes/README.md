@@ -1,3 +1,6 @@
+KIBANA :
+*******
+
 SECTION 1:
 ---------
     # What's kibana and why we use it ?
