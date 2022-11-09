@@ -243,7 +243,7 @@ SECTION 7:
             {"delete" : {"_index":"emp_data", "_id":"7"}}
 
         Search bulk indexes:
-            curl -XGET "http://10.208.41.125:5601/emp_data/_search" -H 'Content-Type: application/json' -d'
+            curl -XGET "http://10.208.41.125:5601/_bulk" -H 'Content-Type: application/json' -d'
             {
                 "query": {
                     "match_all": {}
@@ -251,6 +251,7 @@ SECTION 7:
             }
 
         Performs multiple Indexing, Updating, Deleting operations in a single API call:
+            curl -XPOST "http://10.208.41.125:5601/_bulk" -H 'Content-Type: application/json' -d'
             {"create":{"_index":"emp_data", "_id":"16"}}
             {"name":"mahesh","desc":"pro_manager"}
             {"delete":{"_index":"employee", "_id":"5"}}
