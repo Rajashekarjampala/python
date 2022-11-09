@@ -16,7 +16,14 @@ SECTION 1:
 
 SECTION 2:
 ---------
-    # What's kibana dashboard?        
+    # What's kibana dashboard?  
+        - Kibana dashboard is a collection of charts, graphs, metrics, searches, and maps
+          that have been collected together on a single pane.
+        - Kibana Dashboards create views that pull together charts, maps, to display the full picture of your data
+        - It’s easy to create beautiful dashboards in Kibana by using your Elasticsearch data
+        - Chart, graph, map, or table added to a dashboard is interactive to encourage data exploration
+        - Kibana dashboards provide simple to use and designed to help viewers deeper into any analysis
+        - 
 
 SECTION 3:
 ---------
@@ -88,14 +95,14 @@ SECTION 4:
                 kubectl edit  svc <svc-name> -n <namespace-name>   
 
 SECTION 5:
-    - Kibana Deployment SPEC
+    # Kibana Deployment SPEC
     
         apiVersion: apps/v1
         kind: Deployment
         metadata:
-        name: kibana
-        namespace: kibana
-        labels:
+          name: kibana
+          namespace: kibana
+          labels:
             app: kibana
             kubernetes.io/cluster-service: "true"
             addonmanager.kubernetes.io/mode: Reconcile
@@ -129,7 +136,7 @@ SECTION 5:
                     protocol: TCP
 
 SECTION 6:
-    - Kibana Service SPEC 
+    # Kibana Service SPEC 
 
         apiVersion: v1
         kind: Service
