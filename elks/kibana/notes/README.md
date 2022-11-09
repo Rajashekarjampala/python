@@ -18,7 +18,7 @@ SECTION 1:
 SECTION 2:
 ---------
     # What's kibana dashboard? 
-     
+
         - Kibana dashboard is a collection of charts, graphs, metrics, searches, and maps
           that have been collected together on a single pane.
         - Kibana Dashboards create views that pull together charts, maps, to display the full picture of your data
@@ -42,6 +42,12 @@ SECTION 3:
             
         2. Running Docker Container
             docker run --name <kibana> --net <Network_Name> -p 5601:5601 docker.elastic.co/kibana/kibana:8.5.0
+
+        - Check the docker images by using below command
+            docker images
+
+        - Check the docker containers by using below command
+            docker ps -a        
 
         - Kibana default port number is 5601
         - We can access the kibana UI Access using localhost:5601 or VM_IP:5601        
