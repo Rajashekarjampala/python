@@ -24,8 +24,7 @@ SECTION 2:
         - Kibana Dashboards create views that pull together charts, maps, to display the full picture of your data
         - It’s easy to create beautiful dashboards in Kibana by using your Elasticsearch data
         - Chart, graph, map, or table added to a dashboard is interactive to encourage data exploration
-        - Kibana dashboards provide simple to use and designed to help viewers deeper into any analysis
-        - 
+        - Kibana dashboards provide simple to use and designed to help viewers deeper into any analysis        
 
 SECTION 3:
 ---------
